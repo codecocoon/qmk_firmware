@@ -21,6 +21,8 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
 }
 
 bool oled_task_kb(void) {
+    oled_task_user();
+    /*
     if (!oled_task_user()) {
         return false;
     }
@@ -33,7 +35,7 @@ bool oled_task_kb(void) {
             0xc0,0xc1,0xc2,0xc3,0xc4,0xc5,0xc6,0xc7,0xc8,0xc9,0xca,0xcb,0xcc,0xcd,0xce,0xcf,0xd0,0xd1,0xd2,0xd3,0xd4,0};
         // clang-format on
 
-        oled_write_P(qmk_logo, false);
+        //oled_write_P(qmk_logo, false);
         oled_write_P(PSTR("Kyria "), false);
 #if defined(KEYBOARD_splitkb_kyria_rev1)
         oled_write_P(PSTR("rev1\n\n"), false);
@@ -88,6 +90,7 @@ bool oled_task_kb(void) {
         // clang-format on
         oled_write_raw_P(kyria_logo, sizeof(kyria_logo));
     }
+    */
     return false;
 }
 #endif
