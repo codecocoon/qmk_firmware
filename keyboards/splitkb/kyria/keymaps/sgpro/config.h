@@ -16,12 +16,25 @@
 
 #pragma once
 
+#ifdef OLED_ENABLE
+  #define OLED_DISPLAY_128X64
+#endif
+
 #ifdef RGBLIGHT_ENABLE
-#    define RGBLIGHT_ANIMATIONS
+// #    define RGBLIGHT_ANIMATIONS
+// #    undef RGBLIGHT_EFFECT_STATIC_GRADIENT
+// #    undef RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#    define RGBLIGHT_MAX_LAYERS 13
+#    define RGBLIGHT_LAYERS
+#    define RGBLIGHT_SPLIT
+#    define RGBLED_NUM 20
+#    define RGBLED_SPLIT { 10, 10 }
+#    define RGBLIGHT_MAX_LAYERS 13
 #    define RGBLIGHT_HUE_STEP  8
 #    define RGBLIGHT_SAT_STEP  8
 #    define RGBLIGHT_VAL_STEP  8
 #    define RGBLIGHT_LIMIT_VAL 150
+#    define RGBLIGHT_SLEEP
 #endif
 
 // Lets you roll mod-tap keys

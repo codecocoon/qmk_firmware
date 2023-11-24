@@ -1,10 +1,12 @@
 OLED_DRIVER_ENABLE = yes   # Enables the use of OLED displays
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306   # Enables the use of OLED displays
-WPM_ENABLE = yes
-MOUSEKEY_ENABLE = yes
+WPM_ENABLE = no
 
-TAP_DANCE_ENABLE = no
+RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
+
+MOUSEKEY_ENABLE = yes
+TAP_DANCE_ENABLE = yes
 STENO_ENABLE = no
 BOOTMAGIC_ENABLE =no
 TERMINAL_ENABLE = no
